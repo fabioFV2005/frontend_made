@@ -1,0 +1,17 @@
+#root {
+ /* backgrounds */
+  --bg-main: #0D1B2A;
+  --accent-primary: #F15A29; 
+  --accent-secondary: #9EA3A8;
+  --transition: all 0.3s ease;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+body {
+  background-color: #9EA3A8;
+}
