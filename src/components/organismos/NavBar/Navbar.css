@@ -6,12 +6,18 @@
 
 .navbar {
     width: 100%;
-    padding: 1rem 0;
+    height: 4.7em;
+    padding: 1.2rem 0;
+    padding-top: 1.8em;
     position: fixed;
     top: 0;
     z-index: 1000;
     display: flex;
     justify-content: center;
+    transition: background-color 0.5s ease;
+}
+.navbar.scrolled {
+    background-color: var(--bg-main);
 }
 
 .nav-container {

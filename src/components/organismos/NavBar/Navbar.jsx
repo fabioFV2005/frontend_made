@@ -1,6 +1,7 @@
 import React from 'react';
 import MadeLogo from '../../../assets/Made/MadeLogo2.png';
 import './Navbar.css'
+import { useEffect, useState } from 'react';
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -12,9 +13,19 @@ function Navbar() {
   const closeMenu = () => {
     setIsMenuOpen(false);
   }
+  
+  const[scrolled, setScrolled] = useState(false)
 
+  useEffect(() =>{
+      const handleScroll = () => {
+        setScrolled(window.scrollY > 400)
+      }
+      window.addEventListener("scroll", handleScroll)
+
+      return() => window.removeEventListener("scroll", handleScroll)
+    }, [])
   return (
-    <nav className='navbar'>
+    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="nav-container">
         <div className="nav-logo">
           <a href="/" onClick={closeMenu}>
