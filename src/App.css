@@ -4,6 +4,7 @@
   --accent-primary: #F15A29; 
   --accent-secondary: #9EA3A8;
   --transition: all 0.3s ease;
+  background-color: #0D1B2A;
 }
 
 *{
@@ -11,4 +12,25 @@
   padding: 0;
   width: 100%;
   box-sizing: border-box;
+}
+
+.page-content{
+  padding-top: 4.7em;
+  min-height: 100vh;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-page {
+  padding-top: 0 !important;
 }
