@@ -3,6 +3,9 @@
   --bg-main: #0D1B2A;
   --accent-primary: #F15A29; 
   --accent-secondary: #9EA3A8;
+  --bg-card: #1b263b;
+  --text-light: #f9f9f9;
+  --text-muted: #95a5a6;
   --transition: all 0.3s ease;
   background-color: #0D1B2A;
 }

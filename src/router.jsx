@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './components/organismos/NavBar/Navbar'
 import Home from './pages/Home'
 import Cotizacion from "./pages/Cotizacion";
+import AboutUs from './components/organismos/aboutUs/about';
 export default function router() {
   return (
         <Router>
@@ -13,6 +14,11 @@ export default function router() {
                 <Route path="/servicios/cotizacion" element={
                     <div className='page-content'> 
                         <Cotizacion />
+                    </div>
+                } />
+                <Route path="/nosotros" element={
+                    <div className='page-content'> 
+                        <AboutUs />
                     </div>
                 } />
                 {/* <Route path="/Nosotros" element={<Nosotros/>}/>
