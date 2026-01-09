@@ -1,0 +1,194 @@
+.servicios-proceso{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.proceso-head{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+}
+
+.proceso-head a {
+    width: max-content;
+    color: white;
+    font-size: 1em;
+    text-decoration: none;
+    padding: 1em;
+    margin: 2em;
+    border-radius: 1.5em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    background: var(--accent-primary);
+}
+
+.proceso-head h1{
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.proceso-head p {
+    font-size: 1.1em;
+}
+
+.proceso-steps{
+    display: flex;
+    padding: 1em;
+    justify-content: space-around;
+    align-items: center; 
+}
+
+.steps {
+    width: 23%;
+    height: 20em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    margin: 0;
+    border: 4px solid var(--bg-main);
+    border-radius: 2em;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.7s ease;
+}
+
+.steps:hover{
+    width: 25%;
+    height: 21em;
+    background: var(--bg-main);
+    color: white;
+    border: 1px solid var(--bg-main);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.step-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.step-icon svg {
+    width: 100%;
+    height: 100%;
+    stroke: var(--accent-primary);
+    transition: all 0.5s ease;
+}
+
+.steps:hover {
+    stroke: white;
+    transform: scale(1.1);
+}
+
+.steps h1 {
+    width: 100%;
+    padding: 0.5em 0;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    transition: all 0.5s ease;
+}
+
+.steps p{
+    width: 80%;
+    font-size: 0.95em;
+    line-height: 1.6;
+    transition: all 0.5s ease;
+}
+
+.steps:hover h1 {
+    transform: translateY(-5px);
+}
+
+
+.proceso-head a:hover{
+    font-size: 1.05em;
+    background: transparent;
+    color: black;
+    border: 3px solid var(--accent-primary);
+}
+
+.divisor{
+    width: 15%;
+    height: 0.3em;
+    margin: 1em;
+    border-radius: 1em;
+    background: var(--accent-primary);
+}
+
+
+
+.servicios-persuade{
+    background: linear-gradient(135deg,var(--bg-main) 00%, var(--bg-white));
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(0% 2%, 100% 10%, 100% 100%, 0 90%);
+    color: white;
+}
+
+.persuade-block{
+    height: 80%;
+    display: flex;
+}
+.block1{
+    width: 30%;
+    align-items: start;
+    text-align: center;
+    justify-content: center;
+    font-size: 30px;
+}
+.block2{
+    width: 30%;
+    align-items: end;
+    justify-content: center;
+    padding-bottom: 2em;
+}
+.block2 p {
+    width: 50%;
+    font-size: 1.1em;
+}
+.block3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+.block{
+    display: flex;
+    flex-direction: column;
+}
+.block-content{
+    width: 75%;
+    display: flex;
+    align-items: end;
+    flex-direction: row;
+    margin: 1em;
+
+    
+}
+
+.block-content h1, .block-content p{
+    width: max-content;
+    padding: 0.3rem;
+}
+
+.block-content h1{
+    font-size: 40px;
+}
+

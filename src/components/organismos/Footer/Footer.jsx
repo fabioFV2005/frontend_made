@@ -47,7 +47,7 @@ function Footer() {
             <span>© 2025 <strong>Made</strong>. Todos los derechos reservados.</span>
             <div className="separador"></div>
             <span className="yachai-credit">
-              Desarrollado con  por <strong> <a href="#" className='Yachai-link'>YachaiSoft</a></strong>
+              Desarrollado por <strong> <a href="#" className='Yachai-link'>YachaiSoft</a></strong>
             </span>
           </div>
         </div>

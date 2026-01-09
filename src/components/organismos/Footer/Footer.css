@@ -1,8 +1,8 @@
 /* Contenedor principal (el componente styled.footer) */
 .main-footer {
-  background-color: #151b2e;
+  background-color: var(--bg-white);
   padding: 4rem 0 2rem;
-  border-top: 1px solid #333;
+  border-top: 1px solid var(--bg-main);
   color: #91a4b7;
   width: 100%;
   font-size: 14px;

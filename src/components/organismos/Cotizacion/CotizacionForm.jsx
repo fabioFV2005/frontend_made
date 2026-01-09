@@ -91,7 +91,7 @@ export default function CotizacionForm() {
         title={modalState.title}
         message={modalState.message}
       />
-
+      <section className="cotizacion-section">
       <div className="cotizacion">
         <h1>Solicita tu cotización</h1>
         
@@ -172,6 +172,7 @@ export default function CotizacionForm() {
           </button>
         </form>
       </div>
+      </section>
     </>
   )
 }
