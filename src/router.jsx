@@ -6,7 +6,7 @@ import Home from './pages/Home'
 import Cotizacion from "./pages/Cotizacion";
 import LoginPage from './auth/LoginPage';
 export default function router() {
-  return (
+return (
         <Router>
             {/* <Navbar/> */}
             <Routes>
