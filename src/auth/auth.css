@@ -4,8 +4,9 @@
     align-items: center;
     height: 100vh;
 }
+
 .container-form {
-    width: 75%;
+    width: 100%;
     height: 75%;
     background-color: #172636;
     display: flex;
@@ -13,33 +14,72 @@
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.login-logo {
-    width: 750px;
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.login-logo {
+    width: 100%;
+    max-width: 450px;
+}
+
+.form-inputs {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.title {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.text-p {
+    color: #9EA3A8;
+    margin-bottom: 40px;
+    font-size: 18px;
+    text-align: center;
+}
+
 .form-container {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px;
 }
+
 .camp {
-    width: 80%;
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
     margin-bottom: 20px;
     position: relative;
 }
-.input-icon{
+
+.input-icon {
     position: absolute;
     left: 15px;
+    top: 15px;
     width: 20px;
     height: 20px;
     color: #9EA3A8;
     z-index: 1;
-    transition: color 0.3s ease;
+    pointer-events: none;
 }
+
+.button-icon {
+    width: 20px;
+    height: 20px;
+}
+
 input {
     width: 100%;
     height: 50px;
@@ -48,16 +88,20 @@ input {
     background-color: #0D1B2A;
     color: white;
     padding-left: 50px;
+    padding-right: 15px;
     font-size: 16px;
     outline: none;
+    transition: border-color 0.3s ease;
 }
+
 input::placeholder {
     color: #9EA3A8;
-    text-transform: capitalize;
 }
+
 input:focus {
     border-color: #F15A29;
 }
+
 .login-button {
     width: 100%;
     height: 50px;
@@ -76,59 +120,46 @@ input:focus {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
 .login-button:hover {
     background: #c23f18;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(241, 90, 41, 0.4);
 }
 
 .login-button:active {
     transform: translateY(0);
     box-shadow: 0 4px 10px rgba(241, 90, 41, 0.3);
 }
-.form-inputs{
-    display: flex;
-    flex-direction: column;
-}
-.title{
-    color: white;
-    margin-bottom: 30px;
-    font-size: 48px;
-    font-weight: 700;
-    text-align: center;
-}
-.text-p{
-    color: #9EA3A8;
-    margin-top: 20px;
-    font-size: 20px;
-    text-align: center;
-}
+
 @media (max-width: 768px) {
     .container-form {
         width: 95%;
         flex-direction: column;
+        height: auto;
         padding: 30px 20px;
     }
 
     .image-container {
         margin-bottom: 30px;
-        text-align: center;
     }
 
     .login-logo {
-        max-width: 350px;
+        max-width: 300px;
     }
 
-    .form-container {
+    .form-inputs {
         padding: 20px;
     }
 
     .title {
-        font-size: 22px;
-        margin-bottom: 20px;
+        font-size: 32px;
+        margin-bottom: 10px;
     }
 
     .text-p {
         font-size: 16px;
-        margin-top: 15px;
+        margin-bottom: 30px;
     }
 
     input {
@@ -141,8 +172,8 @@ input:focus {
         font-size: 14px;
     }
 }
-@media (max-width: 480px) {
 
+@media (max-width: 480px) {
     .container {
         padding: 10px;
     }
@@ -154,43 +185,48 @@ input:focus {
     }
 
     .login-logo {
-        max-width: 250px;
+        max-width: 200px;
     }
 
-    .form-container {
+    .form-inputs {
         padding: 15px 10px;
     }
 
     .title {
-        font-size: 20px;
-        margin-bottom: 15px;
-    }
-
-    .camp {
-        margin-bottom: 15px;
-    }
-
-    input {
-        height: 42px;
-        font-size: 14px;
-        padding-left: 45px;
-    }
-
-    .input-icon,
-    .camp svg {
-        left: 12px;
-        width: 18px;
-        height: 18px;
-    }
-
-    .login-button {
-        height: 42px;
-        font-size: 13px;
-        letter-spacing: 0.5px;
+        font-size: 24px;
+        margin-bottom: 10px;
     }
 
     .text-p {
         font-size: 14px;
-        margin-top: 10px;
+        margin-bottom: 25px;
     }
+
+    input {
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .login-button {
+        height: 45px;
+        font-size: 13px;
+    }
+}
+
+.input-icon,
+.camp svg {
+    left: 12px;
+    width: 18px;
+    height: 18px;
+}
+
+.login-button {
+    height: 42px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+.text-p {
+    font-size: 14px;
+    margin-top: 10px;
 }
