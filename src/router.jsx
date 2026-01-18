@@ -6,6 +6,8 @@ import Home from './pages/Home'
 import Cotizacion from "./pages/Cotizacion";
 import LoginPage from './auth/LoginPage';
 import AboutUs from './components/organismos/aboutUs/about';
+import Services from './components/organismos/ServicesSelect/Services'
+import Proyectos from './components/organismos/Proyectos/proyectos'
 export default function router() {
     return (
         <Router>
@@ -28,6 +30,19 @@ export default function router() {
                         <AboutUs />
                     </div>
                 } />
+
+                <Route path="/servicios" element={
+                    <div className='page-content'>
+                        <Services/>
+                    </div>
+                }
+                />
+                <Route path="/proyectos" element={
+                    <div className='page-content'>
+                        <Proyectos/>
+                    </div>
+                }
+                />
     {/* <Route path="/Nosotros" element={<Nosotros/>}/>
                 <Route path="/Servicios" element={<Servicios/>}/>
                 <Route path="/Contacto" element={<Contacto/>}/>

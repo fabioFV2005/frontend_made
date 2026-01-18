@@ -6,5 +6,5 @@ import Router from './router'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
       <Router />
-  </StrictMode>,
+  </StrictMode>
 )
