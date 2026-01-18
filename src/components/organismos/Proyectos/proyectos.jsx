@@ -2,19 +2,17 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import api from '../../../config/axios';
 import Footer from '../Footer/Footer';
-import './proyectos.css'; // Asegúrate que el nombre del archivo CSS coincida
+import './proyectos.css'; 
 import { toast } from 'sonner'; 
-
+    // ya fue no me dio con el back xd 
 const Proyectos = () => {
-  // Inicializamos siempre como array vacío
+ 
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
-  // Función auxiliar para obtener la imagen de forma segura
   const getImage = (files) => {
     try {
-        // A veces el JSON viene como string desde la BD, intentamos parsearlo si es necesario
         let parsedFiles = files;
         if (typeof files === 'string') {
             parsedFiles = JSON.parse(files);
@@ -26,7 +24,6 @@ const Proyectos = () => {
     } catch (e) {
         console.error("Error parseando imagen:", e);
     }
-    // Imagen por defecto si falla
     return "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"; 
   };
 
