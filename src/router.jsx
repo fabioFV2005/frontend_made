@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'
 import { useState } from 'react';
+import { Toaster } from 'sonner';
 import Navbar from './components/organismos/NavBar/Navbar'
 import Home from './pages/Home'
 import Cotizacion from "./pages/Cotizacion";
@@ -11,6 +12,7 @@ import Proyectos from './components/organismos/Proyectos/proyectos'
 export default function router() {
     return (
         <Router>
+            <Toaster position="top-right" richColors />
             {/* <Navbar/> */}
             <Routes>
                 <Route path="/" element={<Home />} />
