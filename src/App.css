@@ -1,20 +1,25 @@
 #root {
  /* backgrounds */
-  --bg-main: #0D1B2A;
+  --bg-main:  #172636;
+  --bg-white: #0D1B2A;
   --accent-primary: #F15A29; 
   --accent-secondary: #9EA3A8;
   --bg-card: #1b263b;
   --text-light: #f9f9f9;
   --text-muted: #95a5a6;
   --transition: all 0.3s ease;
-  background-color: #0D1B2A;
+
 }
 
 *{
+  color:white;
   margin: 0;
   padding: 0;
   width: 100%;
   box-sizing: border-box;
+  font-family:  sans-serif;
+
+  
 }
 
 .page-content{
@@ -36,4 +41,5 @@
 
 .home-page {
   padding-top: 0 !important;
+  background-color: var(--bg-white);
 }

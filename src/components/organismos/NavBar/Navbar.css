@@ -26,14 +26,14 @@
 .navbar.on-home.scrolled::after {
   content: '';
   position: absolute;
-  bottom: -30px;
+  bottom: -10px;
   left: 0;
   right: 0;
-  height: 30px;
+  height: 10px;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.8) 0%,
-    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.3) 40%,
     transparent 100%
   );
   pointer-events: none;
@@ -50,10 +50,10 @@
 .navbar:not(.on-home).scrolled::after {
   content: '';
   position: absolute;
-  bottom: -30px;
+  bottom: -10px;
   left: 0;
   right: 0;
-  height: 30px;
+  height: 10px;
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.584) 0%,

@@ -1,43 +1,171 @@
-.nosotros-section{
-    width: 100%;
-    height: 100vh;
-    padding: 1em;
-    display: flex;
+/* HomeSobrenosotros.css */
 
+.nosotros-section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 2em 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-white);
 }
 
 .nosotros-conteainer{
     width: 100%;
+    max-width: 1200px;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.5em;
 }
-.nosotros-history{
-    border-radius: 1em;
-    width: 40%;
+
+.nosotros-history {
+    border-radius: 1.5em;
+    width: 48%;
     background: var(--bg-main);
+    padding: 3em 2.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: var(--transition);
 }
-.nosotros-stats{
-    padding: 1em;
-    border-radius: 1em;
+
+.nosotros-history:hover {
+    transform: translateY(-5px);
+}
+
+.nosotros-stats {
+    padding: 0;
+    border-radius: 1.5em;
     background: var(--accent-secondary);
-    width: 40%;
+    width: 48%;
+    overflow: hidden;
+    position: relative;
 }
-.nosotros-inicio{
-    padding: 0.5em;
-    border-radius: 0.5em ;
-    background: var(--accent-primary) ;
-    color: white;
-    font-size: 1em;
+
+.nosotros-stats img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1.5em;
+    transition: transform 0.5s ease;
 }
-.nosotros-tittle{
-    padding: 0.5em;
-    color: white;
+
+.nosotros-stats img:hover {
+    transform: scale(1.03);
 }
-.dividor{
-    height: 5px;
-    width: 10em;
-    margin-left: 0.5em;
-    border-radius: 1em;
+
+.nosotros-inicio {
+    padding: 0.6em 1.2em;
+    width: max-content;
+    border-radius: 2em;
     background: var(--accent-primary);
+    color: white;
+    font-size: 0.9em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 1.5em;
+    box-shadow: 0 4px 12px rgba(var(--accent-primary-rgb, 0, 0, 0), 0.2);
+}
+
+.nosotros-tittle {
+    padding: 0.5em 0;
+    color: white;
+    font-size: 2.8em;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 0.5em;
+    letter-spacing: -0.5px;
+}
+
+.dividor {
+    height: 4px;
+    width: 70px;
+    margin-left: 0.5em;
+    margin-bottom: 2em;
+    border-radius: 2px;
+    background: var(--accent-primary);
+}
+
+.nosotros-description {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 1.5em;
+    font-weight: 300;
+}
+
+.description-description {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1em;
+    line-height: 1.7;
+    margin-bottom: 2.5em;
+    font-weight: 300;
+}
+
+.nosotros-history a, .button-general {
+    text-decoration: none;
+    text-align: center;
+    padding: 1em 2em;
+    background: transparent;
+    color: white;
+    border: 2px solid var(--accent-primary);
+    border-radius: 2.5em;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    margin-top: auto;
+    text-transform: uppercase;
+}
+
+.nosotros-history a:hover {
+    background: var(--accent-primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(var(--accent-primary-rgb, 0, 0, 0), 0.3);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .nosotros-conteainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+    }
+    
+    .nosotros-history, .nosotros-stats {
+        width: 90%;
+        max-width: 600px;
+    }
+    
+    .nosotros-tittle {
+        font-size: 2.3em;
+    }
+}
+
+@media (max-width: 576px) {
+    .nosotros-section {
+        padding: 1.5em 1em;
+        min-height: auto;
+    }
+    
+    .nosotros-history, .nosotros-stats {
+        width: 100%;
+        padding: 2em 1.5em;
+    }
+    
+    .nosotros-tittle {
+        font-size: 2em;
+    }
+    
+    .nosotros-history button {
+        width: 100%;
+        text-align: center;
+    }
 }
