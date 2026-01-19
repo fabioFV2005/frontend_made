@@ -1,0 +1,127 @@
+.portfolio-section {
+    padding: 6rem 0 10rem;
+    background: var(--bg-main);
+    min-height: 100vh;
+  }
+  
+  .portfolio-header {
+    margin-bottom: 5rem;
+    text-align: center;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); 
+    gap: 3rem;
+    padding-top: 2rem;
+  }
+  
+  .project-card-editorial {
+    background: var(--bg-card);
+    border-radius: 1em;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    border-left: 4px solid transparent; 
+  }
+  
+  .project-card-editorial:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+    border-left-color: var(--accent-primary); 
+  }
+  
+  
+  .card-img-box {
+    height: 280px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .card-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+    filter: grayscale(20%);
+  }
+  
+  .project-card-editorial:hover .card-img-box img {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+  }
+  
+  .status-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(13, 27, 42, 0.9); 
+    color: var(--accent-primary);
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    border: 1px solid var(--accent-primary);
+  }
+  
+  .card-content {
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+    font-family: var(--font-heading, serif); 
+  }
+  
+  .location-text {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+  }
+  
+  .card-desc {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .card-footer {
+    margin-top: auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .date-info {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
