@@ -1,3 +1,5 @@
+# Inicializacion del proyecto
+
 1.- ejecuta el siguiente comando 
 ```
     npm install
@@ -15,3 +17,7 @@
 ```
     npm run dev
 ```
+
+
+# Arquitectura del sistema 
+a
