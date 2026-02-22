@@ -21,14 +21,14 @@
 
 # Arquitectura del sistema 
 src/
-├── assets/             # Archivos estáticos (imágenes, fuentes, svg)
-├── components/         # Componentes globales y reutilizables (Botones, Inputs)
-├── context/            # Proveedores de estado global (Context API)
-├── hooks/              # Custom hooks reutilizables (useAuth, useFetch)
-├── layout/             # Componentes de estructura (Navbar, Footer, Sidebar)
-├── pages/              # Componentes de vista (Home, Login, Dashboard)
-├── services/           # Llamadas a APIs (instancias de Axios, fetch)
-├── styles/             # Estilos globales o configuraciones de Tailwind/SASS
-├── utils/              # Funciones puras de ayuda (formateo de fechas, validaciones)
-├── App.jsx             # Componente raíz y definición de rutas
-└── main.jsx            # Punto de entrada de la aplicación
+├── 📁 assets/       # Recursos estáticos (Imágenes, fuentes, iconos SVG)
+├── 📁 components/   # Componentes atómicos y reutilizables (Botones, Inputs, Cards)
+├── 📁 context/      # Estados globales mediante React Context API
+├── 📁 hooks/        # Custom Hooks para lógica reutilizable (useAuth, useLocalStorage)
+├── 📁 layout/       # Componentes estructurales de la interfaz (Navbar, Sidebar, Footer)
+├── 📁 pages/        # Componentes de vista principal (corresponden a las rutas)
+├── 📁 services/     # Lógica de comunicación con APIs (Instancias de Axios, servicios)
+├── 📁 styles/       # Estilos globales, variables de CSS o configuración de temas
+├── 📁 utils/        # Funciones puras de utilidad (Formateadores, validaciones, constantes)
+├── 📄 App.jsx       # Componente raíz y configuración de rutas
+└── 📄 main.jsx      # Punto de entrada de la aplicación
