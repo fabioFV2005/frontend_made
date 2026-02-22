@@ -36,11 +36,11 @@ src/
 
 ├── 📁 shared/          # 📦 Núcleo reutilizable de la aplicación
 
-│   ├── 📁 components/  # Componentes UI base (Buttons, Modals, Inputs)
+│     ├── 📁 components/  # Componentes UI base (Buttons, Modals, Inputs)
 
-│   ├── 📁 utils/       # Funciones puras (Formateadores, validaciones)
+│     ├── 📁 utils/       # Funciones puras (Formateadores, validaciones)
 
-│   └── 📁 constants/   # Enums, rutas y variables constantes
+│     └── 📁 constants/   # Enums, rutas y variables constantes
 
 ├── 📁 styles/          # Estilos globales y temas (Tailwind/CSS)
 
