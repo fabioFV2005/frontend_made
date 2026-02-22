@@ -20,4 +20,30 @@
 
 
 # Arquitectura del sistema 
-a
+src/
+
+├── 📁 assets/          # Archivos estáticos (Imágenes, fuentes, iconos)
+
+├── 📁 context/         # Estados globales (React Context API)
+
+├── 📁 hooks/           # Custom Hooks globales (useAuth, useFetch)
+
+├── 📁 layout/          # Estructura visual (Navbar, Footer, Sidebars)
+
+├── 📁 pages/           # Vistas principales (Home, Login, Dashboard)
+
+├── 📁 services/        # Cliente API y peticiones (Axios/Fetch)
+
+├── 📁 shared/          # 📦 Núcleo reutilizable de la aplicación
+
+│     ├── 📁 components/  # Componentes UI base (Buttons, Modals, Inputs)
+
+│     ├── 📁 utils/       # Funciones puras (Formateadores, validaciones)
+
+│     └── 📁 constants/   # Enums, rutas y variables constantes
+
+├── 📁 styles/          # Estilos globales y temas (Tailwind/CSS)
+
+├── 📄 App.jsx          # Configuración de rutas y Providers
+
+└── 📄 main.jsx         # Punto de entrada del DOM
