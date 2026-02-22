@@ -22,24 +22,28 @@
 # Arquitectura del sistema 
 src/
 
-├── 📁 assets/       # Recursos estáticos (Imágenes, fuentes, iconos SVG)
+├── 📁 assets/          # Archivos estáticos (Imágenes, fuentes, iconos)
 
-├── 📁 components/   # Componentes atómicos y reutilizables (Botones, Inputs, Cards)
+├── 📁 context/         # Estados globales (React Context API)
 
-├── 📁 context/      # Estados globales mediante React Context API
+├── 📁 hooks/           # Custom Hooks globales (useAuth, useFetch)
 
-├── 📁 hooks/        # Custom Hooks para lógica reutilizable (useAuth, useLocalStorage)
+├── 📁 layout/          # Estructura visual (Navbar, Footer, Sidebars)
 
-├── 📁 layout/       # Componentes estructurales de la interfaz (Navbar, Sidebar, Footer)
+├── 📁 pages/           # Vistas principales (Home, Login, Dashboard)
 
-├── 📁 pages/        # Componentes de vista principal (corresponden a las rutas)
+├── 📁 services/        # Cliente API y peticiones (Axios/Fetch)
 
-├── 📁 services/     # Lógica de comunicación con APIs (Instancias de Axios, servicios)
+├── 📁 shared/          # 📦 Núcleo reutilizable de la aplicación
 
-├── 📁 styles/       # Estilos globales, variables de CSS o configuración de temas
+│   ├── 📁 components/  # Componentes UI base (Buttons, Modals, Inputs)
 
-├── 📁 utils/        # Funciones puras de utilidad (Formateadores, validaciones, constantes)
+│   ├── 📁 utils/       # Funciones puras (Formateadores, validaciones)
 
-├── 📄 App.jsx       # Componente raíz y configuración de rutas
+│   └── 📁 constants/   # Enums, rutas y variables constantes
 
-└── 📄 main.jsx      # Punto de entrada de la aplicación
+├── 📁 styles/          # Estilos globales y temas (Tailwind/CSS)
+
+├── 📄 App.jsx          # Configuración de rutas y Providers
+
+└── 📄 main.jsx         # Punto de entrada del DOM
