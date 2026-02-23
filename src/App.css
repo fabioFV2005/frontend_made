@@ -1,10 +1,39 @@
-#root {
-  --bg-main: #0D1B2A;
-  --accent-primary: #F15A29;
-  --accent-secondary: #9EA3A8;
-  --transition: all 0.3s ease;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&display=swap');
+:root {
+/* Paleta de colores */
+  --cl-navy: #1d2c43;
+  --cl-orange: #f1550a;
+  --cl-gray-medium: #868485;
+  --cl-gray-light: #9ea3a8;
+  --cl-white: #ffffff;
+  --cl-black: #000000;
+
+  /* backgrounds */
+  --bg-main: var(--cl-white); 
+  --bg-card: var(--cl-navy);
+
+  /* texts */
+--text-main: var(--cl-navy);
+  --text-muted: var(--cl-gray-medium);
+  --text-light: var(--cl-white);
+  /* Acentos / Accesorios */
+--accent-primary: var(--cl-orange);
+  --accent-secondary: var(--cl-navy);
+  --accent-tertiary: var(--cl-gray-medium);
+
+  /* Espaciado y bordes */
+  --radius-md: 8px;
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+
+  /* tipografia */
+  --font-regular: "Quicksand", sans-serif;
+  --font-main: "Inter", sans-serif;
+
 }
 
 body {
-  background-color: #9EA3A8;
+  background: var(--cl-gray-light);
+  font-family: var(--font-main);
+  padding: 0;
+  margin: 0;
 }

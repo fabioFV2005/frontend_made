@@ -1,1 +1,25 @@
 @import "tailwindcss";
+
+@theme {
+  /* 1. Paleta de Colores (Los nombres se convierten en clases: bg-navy, text-orange) */
+  --color-navy: #1d2c43;
+  --color-orange: #f1550a;
+  --color-gray-medium: #868485;
+  --color-gray-light: #9ea3a8;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* 2. Variables de Semántica (Alias para fácil mantenimiento) */
+  --color-bg-main: var(--color-white);
+  --color-bg-card: var(--color-navy);
+  --color-text-main: var(--color-navy);
+  --color-accent: var(--color-orange);
+
+  /* 3. Tipografía (Usa las fuentes que importaste) */
+  --font-regular: "Quicksand", sans-serif;
+  --font-main: "Inter", sans-serif;
+
+  /* 4. Efectos y Bordes */
+  --radius-md: 8px;
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+}
