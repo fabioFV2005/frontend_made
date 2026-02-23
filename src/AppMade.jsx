@@ -3,7 +3,7 @@ import { CustomHeader } from './shared/components/custom/CustomHeader'
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ROUTES from './shared/constants/routes';
-// import HomePage from './pages/HomePage';
+import HomePage from './pages/HomePage/Homepage';
 // import AboutPage from './pages/AboutPage';
 // import ProjectsPage from './pages/ProjectsPage';
 // import ContactPage from './pages/ContactPage';
@@ -15,8 +15,8 @@ function App() {
       <CustomHeader />
       <main>
         <Routes>
-          {/* <Route path={ROUTES.HOME} element={<HomePage />} />
-          <Route path={ROUTES.ABOUT_US} element={<AboutPage />} />
+          { <Route path={ROUTES.HOME} element={<HomePage />} />
+          /*<Route path={ROUTES.ABOUT_US} element={<AboutPage />} />
           <Route path={ROUTES.PROJECTS} element={<ProjectsPage />} />
           <Route path={ROUTES.CONTACT} element={<ContactPage />} />
           <Route path={ROUTES.LOGIN} element={<LoginPage />} />
