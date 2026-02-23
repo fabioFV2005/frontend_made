@@ -13,9 +13,9 @@ export const CustomHeader = () => {
 
     return (
 
-        <header className='flex items-center justify-between p-4 bg-transparent text-(--text-light)'>
-            <img src={Logo} alt="Logo" className='w-50' />
-            <ul className='flex flex-col md:flex-row gap-3 text-lg'>
+        <header className='flex items-center justify-between p-4 flex-col md:flex-row bg-transparent text-white z-50 fixed w-full top-0 left-0 transition-colors duration-300'>
+            <img src={Logo} alt="Logo" className='w-60' />
+            <ul className='flex flex-col md:flex-row gap-4 text-lg'>
                 <li>
                     <a href="">Inicio</a>
                 </li>
