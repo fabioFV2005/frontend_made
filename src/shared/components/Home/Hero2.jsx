@@ -13,7 +13,7 @@ const Hero = () => {
         />
 
         {/* Botoncito*/}
-        <div className="absolute top-8 right-8 z-20">
+        {/* <div className="absolute top-8 right-8 z-20">
           <button className="bg-[#f1550a] hover:bg-[#d94a08] text-white rounded-full px-8 py-4 shadow-xl transition-all duration-300 hover:scale-105
             animate-pulse animate-infinite animate-ease-in animate-normal animate-fill-both">
             <div className="flex flex-col leading-tight text-left">
@@ -26,7 +26,7 @@ const Hero = () => {
             </div>
 
           </button>
-        </div>
+        </div> */}
 
         {/* Contenido principal */}
         <div className="relative z-10 flex h-full">

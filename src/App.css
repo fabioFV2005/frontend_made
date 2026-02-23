@@ -32,7 +32,7 @@
 }
 
 body {
-  background: var(--cl-gray-light);
+  background: var(--bg-main);
   font-family: var(--font-main);
   padding: 0;
   margin: 0;
