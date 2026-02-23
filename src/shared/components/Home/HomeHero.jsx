@@ -1,8 +1,9 @@
-import React from 'react';
-import CustomHeader from '../../shared/components/custom/CustomHeader';
-import FOTO1 from '../../assets/imgs/FOTO1.jpg';
+import React from 'react'
+import FOTO1 from '../../../assets/imgs/FOTO1.jpg';
+import {Icon} from 'lucide-react';
 
-const HomePage = () => {
+
+function HomeHero() {
   return (
     <div className="min-h-screen">
       <section
@@ -63,7 +64,7 @@ const HomePage = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default HomePage;
+export default HomeHero
