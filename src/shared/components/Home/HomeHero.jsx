@@ -1,6 +1,8 @@
 import React from 'react'
 import FOTO1 from '../../../assets/imgs/FOTO1.jpg';
 import { Facebook, Instagram, } from 'lucide-react';
+import ReactCountryFlag from "react-country-flag";
+
 const TikTokIcon = ({ className }) => (
   <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
     <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.229V2h-3.066v13.478a2.725 2.725 0 1 1-2.724-2.724c.225 0 .444.028.654.08V9.746a5.793 5.793 0 1 0 5.136 5.732V9.381a7.857 7.857 0 0 0 4.77 1.613V7.93a4.78 4.78 0 0 1-1-.244z" />
@@ -40,20 +42,51 @@ function HomeHero() {
             </div>
           </div>
 
-          <div className="bg-[#0D1B2A] p-8 md:p-10 rounded-[2.5rem] w-full max-w-md shadow-2xl border border-white/10">
-            <h2 className="text-white text-3xl font-bold text-center mb-8">Agenda tu visita</h2>
-            <form className="flex flex-col gap-4">
-              <input type="text" placeholder="Introduce tu nombre y apellido" className="w-full py-4 px-6 rounded-full bg-white text-[#0D1B2A] outline-none" />
-              <input type="email" placeholder="Correo electrónico" className="w-full py-4 px-6 rounded-full bg-white text-[#0D1B2A] outline-none" />
+          <div className="bg-[#0D1B2A] p-8 md:p-10 rounded-4xl w-full max-w-xl shadow-2xl border border-white/10">
+            <h2 className="text-white text-4xl font-bold text-center mb-8">Agenda tu visita</h2>
+            <form className="flex flex-col gap-5">
 
-              <div className="flex bg-white rounded-full overflow-hidden">
-                <span className="flex items-center pl-6 pr-2 text-[#9EA3A8] font-bold border-r border-gray-200">+591</span>
-                <input type="tel" className="w-full py-4 px-4 text-[#0D1B2A] outline-none" />
+              <input
+                type="text"
+                placeholder="Nombre y apellido"
+                className="w-full py-4 px-6 rounded-full bg-white text-[#0D1B2A] placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-[#F15A29] transition-all"
+              />
+
+              <input
+                type="email"
+                placeholder="Correo electrónico"
+                className="w-full py-4 px-6 rounded-full bg-white text-[#0D1B2A] placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-[#F15A29] transition-all"
+              />
+              <div className="flex items-center gap-3 bg-white rounded-full px-6 py-4 focus-within:ring-2 focus-within:ring-[#F15A29] transition-all">
+                <div className="flex items-center gap-2 pr-3 border-r border-gray-300">
+                  <ReactCountryFlag
+                    countryCode="BO"
+                    svg
+                    style={{
+                      width: '28px',
+                      height: '28px',
+                      borderRadius: '50%',
+                      objectFit: 'cover'
+                    }}
+                  />
+                  <span className="text-[#0D1B2A] font-semibold text-sm">+591</span>
+                </div>
+                <input
+                  type="tel"
+                  inputMode="numeric"
+                  maxLength={8}
+                  placeholder="Número de teléfono"
+                  className="flex-1 text-[#0D1B2A] placeholder:text-gray-400 outline-none bg-transparent"
+                />
               </div>
-
-              <input type="text" placeholder="Fecha y Hora de la visita" className="w-full py-4 px-6 rounded-full bg-white text-[#0D1B2A] outline-none" />
-
-              <button type="submit" className="bg-[#F15A29] text-white font-black py-4 px-14 rounded-full mt-4 hover:brightness-110 active:scale-95 transition-all self-center shadow-lg uppercase tracking-widest">
+              <input
+                type="datetime-local"
+                className="w-full py-4 px-6 rounded-full bg-white text-[#0D1B2A] outline-none focus:ring-2 focus:ring-[#F15A29] transition-all"
+              />
+              <button
+                type="submit"
+                className="bg-[#F15A29] text-white font-black py-4 px-14 rounded-full mt-4 hover:brightness-110 active:scale-95 transition-all self-center shadow-lg uppercase tracking-widest"
+              >
                 ENVIAR
               </button>
             </form>
