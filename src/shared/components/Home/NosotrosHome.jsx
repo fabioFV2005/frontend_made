@@ -46,7 +46,7 @@ function NosotrosHome() {
 
           <a
             href="/nosotros"
-            className="group w-fit inline-flex items-center gap-2 px-5 py-2 border-2 border-(--cl-orange) rounded-full text-(--text-main) font-semibold transition-all duration-300 hover:t>ext-[var(--cl-orange)] hover:pr-7"
+            className="group w-fit inline-flex items-center gap-2 px-5 py-2 border-2 border-(--cl-orange) rounded-full text-(--text-main) font-semibold transition-all duration-300 hover:text-(--cl-orange) hover:pr-7"
           >
             Conoce nuestra historia
             <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
