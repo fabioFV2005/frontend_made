@@ -85,7 +85,7 @@ const Hero = () => {
               preserveAspectRatio="xMidYMid meet"
               className="absolute"
               style={{
-                width: '250%',
+                width: '200%',
                 height: 'auto',
                 left: '-20%',
                 top: '50%',
