@@ -1,8 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react'
 import HomeHero from '../shared/components/Home/HomeHero'
-import Hero2 from '../shared/components/Home/LogoAnimado'
+import Hero2 from '../shared/components/Home/FondoAnimado'
 import TeamHome from '../shared/components/Home/TeamHome'
 import StickyButton from '../shared/components/custom/StickyButton'
+import Luna from '../shared/components/Home/Luna'
 
 function Home() {
   const [showButton, setShowButton] = useState(false);
@@ -33,7 +34,7 @@ function Home() {
       </div>
       <Hero2 />      
       <StickyButton isVisible={showButton} />
-      
+      <Luna/>
       <TeamHome />
     </div>
   )
