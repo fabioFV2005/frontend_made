@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import HomeHero from '../shared/components/Home/HomeHero'
-import Hero2 from '../shared/components/Home/Hero2'
+import Hero2 from '../shared/components/Home/LogoAnimado'
 import TeamHome from '../shared/components/Home/TeamHome'
 import StickyButton from '../shared/components/custom/StickyButton'
 
