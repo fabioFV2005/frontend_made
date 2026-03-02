@@ -108,7 +108,7 @@ const Luna = () => {
               DESARROLLADORES INMOBILIARIOS
             </p>
           </div>
-
+{/*
           <nav className="flex flex-wrap justify-center gap-8 mb-10 text-sm tracking-wider">
             {["INICIO", "SOBRE NOSOTROS", "PROYECTOS", "CONTACTO"].map(
               (item) => (
@@ -121,9 +121,9 @@ const Luna = () => {
                 </a>
               ),
             )}
-          </nav>
+          </nav>*/}
 
-          {/* REDES */}
+          {/* REDES 
           <div className="flex gap-5">
             {[
               { icon: FaFacebookF, link: "#" },
@@ -141,7 +141,7 @@ const Luna = () => {
             ))}
           </div>
 
-          <div className="w-full border-t border-white/20 mt-10"></div>
+          <div className="w-full border-t border-white/20 mt-10"></div>*/}
         </div>
       </motion.div>
     </div>

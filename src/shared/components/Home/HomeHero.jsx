@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect, useRef } from 'react';
+import React, { useState, useCallback, useEffect, useRef } from "react";
 
 import { slides } from "@/data/slides";
 import {
@@ -8,10 +8,10 @@ import {
   // CarouselNext,
   // CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 function SlideMedia({ slide }) {
-  if (slide.type === 'video') {
+  if (slide.type === "video") {
     return (
       <video
         className="absolute inset-0 w-full h-full object-cover"
@@ -41,7 +41,7 @@ function HomeHero() {
   const handleApiChange = useCallback((newApi) => {
     if (!newApi) return;
     setApi(newApi);
-    newApi.on('select', () => {
+    newApi.on("select", () => {
       setCurrent(newApi.selectedScrollSnap());
     });
   }, []);
@@ -60,23 +60,25 @@ function HomeHero() {
     const onPointerDown = () => clearInterval(intervalRef.current);
     const onPointerUp = () => startAutoplay();
 
-    api.on('pointerDown', onPointerDown);
-    api.on('pointerUp', onPointerUp);
+    api.on("pointerDown", onPointerDown);
+    api.on("pointerUp", onPointerUp);
 
     return () => {
       clearInterval(intervalRef.current);
-      api.off('pointerDown', onPointerDown);
-      api.off('pointerUp', onPointerUp);
+      api.off("pointerDown", onPointerDown);
+      api.off("pointerUp", onPointerUp);
     };
   }, [api]);
 
-  const scrollTo = useCallback((index) => {
-    if (api) api.scrollTo(index);
-  }, [api]);
+  const scrollTo = useCallback(
+    (index) => {
+      if (api) api.scrollTo(index);
+    },
+    [api],
+  );
 
   return (
     <section className="relative w-full h-screen overflow-hidden bg-stone-950">
-
       <Carousel
         setApi={handleApiChange}
         opts={{ loop: true }}
@@ -84,8 +86,10 @@ function HomeHero() {
       >
         <CarouselContent className="h-full ml-0">
           {slides.map((slide) => (
-            <CarouselItem key={slide.id} className="relative w-full h-screen pl-0 overflow-hidden">
-
+            <CarouselItem
+              key={slide.id}
+              className="relative w-full h-screen pl-0 overflow-hidden"
+            >
               <SlideMedia slide={slide} />
 
               {/* opcion 1 */}
@@ -110,15 +114,20 @@ function HomeHero() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <Link to="/proyectos" className="px-7 py-3 bg-orange-light hover:bg-orange-light/80 active:scale-95 text-white font-bold text-sm tracking-wide rounded-lg transition-all duration-200 w-fit">
+                  <Link
+                    to="/proyectos"
+                    className="px-7 py-3 bg-orange-light hover:bg-orange-light/80 active:scale-95 text-white font-bold text-sm tracking-wide rounded-lg transition-all duration-200 w-fit"
+                  >
                     Ver Proyectos
                   </Link>
-                  <Link to="/contacto" className="px-7 py-3 border border-white/30 hover:border-white/70 hover:bg-white/10 active:scale-95 text-white font-medium text-sm rounded-lg backdrop-blur-sm transition-all duration-200 w-fit">
+                  <Link
+                    to="/contacto"
+                    className="px-7 py-3 border border-white/30 hover:border-white/70 hover:bg-white/10 active:scale-95 text-white font-medium text-sm rounded-lg backdrop-blur-sm transition-all duration-200 w-fit"
+                  >
                     Contáctanos
                   </Link>
                 </div>
               </div>
-
             </CarouselItem>
           ))}
         </CarouselContent>
@@ -133,17 +142,18 @@ function HomeHero() {
             key={i}
             onClick={() => scrollTo(i)}
             aria-label={`Ir al slide ${i + 1}`}
-            className={`rounded-full transition-all duration-300 ${i === current
-              ? 'w-8 h-2 bg-orange-light'
-              : 'w-2 h-2 bg-white/40 hover:bg-white/70'
-              }`}
+            className={`rounded-full transition-all duration-300 ${
+              i === current
+                ? "w-8 h-2 bg-orange-light"
+                : "w-2 h-2 bg-white/40 hover:bg-white/70"
+            }`}
           />
         ))}
       </div>
 
       <div className="absolute top-1/2 -translate-y-1/2 right-4 z-20 hidden lg:flex flex-col items-center gap-2 select-none">
         <span className="text-xs font-mono text-white/50">
-          {String(current + 1).padStart(2, '0')}
+          {String(current + 1).padStart(2, "0")}
         </span>
         <div className="relative w-px h-16 bg-white/20">
           <div
@@ -152,10 +162,9 @@ function HomeHero() {
           />
         </div>
         <span className="text-xs font-mono text-white/50">
-          {String(slides.length).padStart(2, '0')}
+          {String(slides.length).padStart(2, "0")}
         </span>
       </div>
-
     </section>
   );
 }

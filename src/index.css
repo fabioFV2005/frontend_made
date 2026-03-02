@@ -13,6 +13,7 @@
   --color-gray-light: #9ea3a8;
   --color-white: #ffffff;
   --color-black: #000000;
+  --color-azul-variante: #17253b;
 
   /* 2. Variables de Semántica (Alias para fácil mantenimiento) */
   --color-bg-main: var(--color-white);
