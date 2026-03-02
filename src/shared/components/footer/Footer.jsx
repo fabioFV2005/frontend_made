@@ -4,7 +4,7 @@ import patronSVG from "../../../assets/svg/patron-made.svg";
 
 function Footer() {
   return (
-    <footer className="relative w-full bg-(--bg-card) pt-16 pb-8 text-(--text-muted) text-sm z-10 overflow-hidden font-(--font-main) border-t border-[rgba(145,164,183,0.2)]">
+    <footer className="relative w-full bg-[#17253b] pt-16 pb-8 text-(--text-muted) text-sm z-10 overflow-hidden font-(--font-main) border-t border-[rgba(145,164,183,0.2)]">
       <img
         src={patronSVG}
         alt="Fondo de patrón"

@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react'
 import HomeHero from '../shared/components/Home/HomeHero'
-import Hero2 from '../shared/components/Home/Hero2'
+import Hero2 from '../shared/components/Home/FondoAnimado'
 import StickyButton from '../shared/components/custom/StickyButton'
+import Luna from '../shared/components/Home/Luna'
 import ProcesoHome from '../shared/components/Home/ProcesoHome'
 import NosotrosHome from '../shared/components/Home/NosotrosHome'
 
@@ -35,7 +36,7 @@ function Home() {
       <ProcesoHome/>
       <Hero2 />      
       <StickyButton isVisible={showButton} />
-      <NosotrosHome/>
+      <Luna/>
     </div>
   )
 }
