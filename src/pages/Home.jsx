@@ -1,10 +1,11 @@
-import React, { useState, useRef, useEffect } from 'react'
-import HomeHero from '../shared/components/Home/HomeHero'
-import Hero2 from '../shared/components/Home/FondoAnimado'
-import StickyButton from '../shared/components/custom/StickyButton'
-import Luna from '../shared/components/Home/Luna'
-import ProcesoHome from '../shared/components/Home/ProcesoHome'
-import NosotrosHome from '../shared/components/Home/NosotrosHome'
+import React, { useState, useRef, useEffect } from "react";
+import HomeHero from "../shared/components/Home/HomeHero";
+import Hero2 from "../shared/components/Home/FondoAnimado";
+import StickyButton from "../shared/components/custom/StickyButton";
+import Luna from "../shared/components/Home/Luna";
+import ProcesoHome from "../shared/components/Home/ProcesoHome";
+import NosotrosHome from "../shared/components/Home/NosotrosHome";
+import BlueVideo from "../shared/components/custom/BlueVideo";
 
 function Home() {
   const [showButton, setShowButton] = useState(false);
@@ -15,10 +16,10 @@ function Home() {
       ([entry]) => {
         setShowButton(!entry.isIntersecting);
       },
-      { 
-        threshold: 0.7, 
-        rootMargin: "0px" 
-      }
+      {
+        threshold: 0.7,
+        rootMargin: "0px",
+      },
     );
 
     if (heroRef.current) {
@@ -33,12 +34,14 @@ function Home() {
       <div ref={heroRef}>
         <HomeHero />
       </div>
-      <ProcesoHome/>
-      <Hero2 />      
+      <ProcesoHome />
+      <Hero2 />
+      <BlueVideo />
+      <NosotrosHome />
+      <Luna />
       <StickyButton isVisible={showButton} />
-      <Luna/>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;

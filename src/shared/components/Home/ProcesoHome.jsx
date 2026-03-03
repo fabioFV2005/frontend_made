@@ -29,21 +29,21 @@ function ProcesoHome() {
       title: "Planificación & Diseño",
       desc: "Desarrollamos conceptos arquitectónicos innovadores que se adaptan a las necesidades del mercado y maximizan el valor del proyecto.",
       Icon: PencilRuler,
-      delay: "delay-[200ms]",
+      delay: "delay-[125ms]",
     },
     {
       id: 2,
       title: "Construcción",
       desc: "Ejecutamos proyectos con los más altos estándares de calidad, utilizando tecnologías y materiales de vanguardia.",
       Icon: HardHat,
-      delay: "delay-[400ms]",
+      delay: "delay-[225ms]",
     },
     {
       id: 3,
       title: "Comercialización",
       desc: "Gestionamos la venta de unidades con estrategias personalizadas que conectan con los compradores adecuados.",
       Icon: TrendingUp,
-      delay: "delay-[600ms]",
+      delay: "delay-[325ms]",
     },
   ];
 
@@ -67,7 +67,7 @@ function ProcesoHome() {
 
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % cards.length);
-    }, 2000);
+    }, 1500);
 
     return () => clearInterval(interval);
   }, [isInteracting, cards.length]);
@@ -83,7 +83,7 @@ function ProcesoHome() {
 
     timerRef.current = setTimeout(() => {
       setIsInteracting(false);
-    }, 3000);
+    }, 500);
   };
 
   return (

@@ -23,22 +23,22 @@ const MADE = () => {
   const videoPosition = {
     clip1: {
       x: "-40%",
-      y: "2%", 
+      y: "2%",
     },
     clip2: {
-      x: "-19%", 
-      y: "-16%", 
+      x: "-19%",
+      y: "-16%",
     },
     clip3: {
-      x: "-35%",
-      y: "-35%",
+      x: "-25%",
+      y: "25%",
     },
   };
 
   // Escala para videos
   const videoScale = {
     clip1: 0.8,
-    clip2: 0.6, 
+    clip2: 0.6,
     clip3: 0.6,
   };
 
@@ -120,12 +120,14 @@ const MADE = () => {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <div style={{ 
-                position: "relative", 
-                width: "100%", 
-                height: "100%",
-                overflow: "hidden"
-              }}>
+              <div
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  height: "100%",
+                  overflow: "hidden",
+                }}
+              >
                 {/* Contenedor del video con transform */}
                 <div
                   style={{
