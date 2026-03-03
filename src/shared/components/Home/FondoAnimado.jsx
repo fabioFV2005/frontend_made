@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import patronSVG from "../../../assets/svg/patron-made.svg";
-//No sabia que videos poner xd
-import video1 from "../../../assets/Made/header.mp4";
-import video2 from "../../../assets/Made/header.mp4";
-import video3 from "../../../assets/Made/header.mp4";
+import video1 from "../../../assets/hero/building2.mp4";
+import video2 from "../../../assets/hero/building.mp4";
+import video3 from "../../../assets/hero/building.mp4";
 
 const MADE = () => {
   const [clip, setClip] = useState("clip1");
@@ -19,6 +18,28 @@ const MADE = () => {
     clip1: video1,
     clip2: video2,
     clip3: video3,
+  };
+  // Posicion de videos
+  const videoPosition = {
+    clip1: {
+      x: "-40%",
+      y: "2%", 
+    },
+    clip2: {
+      x: "-19%", 
+      y: "-16%", 
+    },
+    clip3: {
+      x: "-35%",
+      y: "-35%",
+    },
+  };
+
+  // Escala para videos
+  const videoScale = {
+    clip1: 0.8,
+    clip2: 0.6, 
+    clip3: 0.6,
   };
 
   useEffect(() => {
@@ -61,7 +82,7 @@ const MADE = () => {
             </clipPath>
 
             <clipPath id="clip3">
-              <path d="M950.7,632.1h241.1c4.64-.04,8.93,2.45,11.2,6.5l136.6,250.5c4.4,8.1-1.7,17.9-11.3,17.9h-150.1c-3.65.03-7.15-1.49-9.6-4.2l-227.4-250.4c-7.2-7.9-1.4-20.3,9.5-20.3Z" />
+              <path d={path3} />
             </clipPath>
           </defs>
 
@@ -89,7 +110,7 @@ const MADE = () => {
           <AnimatePresence mode="wait">
             <motion.foreignObject
               key={clip}
-              x="0"
+              x="500"
               y="0"
               width="1920"
               height="1080"
@@ -99,18 +120,55 @@ const MADE = () => {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <video
-                src={videos[clip]}
-                autoPlay
-                muted
-                loop
-                playsInline
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                }}
-              />
+              <div style={{ 
+                position: "relative", 
+                width: "100%", 
+                height: "100%",
+                overflow: "hidden"
+              }}>
+                {/* Contenedor del video con transform */}
+                <div
+                  style={{
+                    position: "absolute",
+                    width: "100%",
+                    height: "100%",
+                    transform: `translate(${videoPosition[clip].x}, ${videoPosition[clip].y}) scale(${videoScale[clip]})`,
+                    transformOrigin: "center center",
+                    willChange: "transform",
+                  }}
+                >
+                  <video
+                    src={videos[clip]}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
+                  />
+                </div>
+
+                {/* Capa naranja para clip2 */}
+                {clip === "clip2" && (
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      backgroundColor: "#f1550a",
+                      opacity: 0.25,
+                      mixBlendMode: "overlay", // Tambien podriamos usar "multiply", "screen", "soft-light"
+                      pointerEvents: "none",
+                      zIndex: 10,
+                    }}
+                  />
+                )}
+              </div>
             </motion.foreignObject>
           </AnimatePresence>
         </g>
